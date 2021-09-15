@@ -1,0 +1,12 @@
+service: serverless-schedule
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: ap-northeast-2
+  lambdaHashingVersion: 20201221
+
+functions:
+  hello:
+    handler: handler.hello
