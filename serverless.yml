@@ -9,4 +9,15 @@ provider:
 
 functions:
   testCall:
-    handler: src/space.testCall
+    handler: src/test.testCall
+    events:
+      - http:
+          path: testCall
+          method: get
+  testCron:
+    handler: src/test.testCron
+    events:
+      - schedule: cron(0/10 * ? * * *)
+      - http:
+          path: testCron
+          method: get
