@@ -8,7 +8,7 @@ const response = (statusCode, body) => ({
 
 module.exports.testCall = async (event) => {
     try {
-        await axios.get('https://dev.taling.me/api3/talent/liveroom.php');
+        await axios.get(process.env.TALING_ENDPOINT + '/api3/talent/liveroom.php');
         return response(200, {
             message: 'OK testCall',
             input: event,
@@ -23,7 +23,7 @@ module.exports.testCall = async (event) => {
 
 module.exports.testCron = async (event) => {
     try {
-        await axios.get('http://dev.taling.me/api3/talent/liveroom.php');
+        await axios.get(process.env.TALING_ENDPOINT + '/api3/talent/liveroom.php');
         return response(200, {
             message: 'OK testCron',
             input: event,

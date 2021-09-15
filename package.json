@@ -1,5 +1,11 @@
 {
+  "scripts": {
+    "build:dev": "profile=development"
+  },
   "dependencies": {
     "axios": "^0.21.4"
+  },
+  "devDependencies": {
+    "serverless-dotenv-plugin": "^3.9.0"
   }
 }
